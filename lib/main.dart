@@ -1,6 +1,7 @@
 import 'package:asbeza/bloc/asbeza_bloc.dart';
 import 'package:asbeza/routes.dart';
 import 'package:asbeza/views/home.dart';
+import 'package:asbeza/views/profile.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
