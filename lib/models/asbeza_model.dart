@@ -13,17 +13,15 @@ class Asbeza extends Equatable {
       required this.image,
       required this.price});
   @override
-  List<Object?> get props => [id, name, image];
-  static List<Asbeza> asbezas = [
-    Asbeza(
-        id: '0',
-        name: 'carrot',
-        image: Image.asset('images/carrot.jpeg'),
-        price: 10),
-    Asbeza(
-        id: '0',
-        name: 'spinach',
-        image: Image.asset('images/carrot.jpeg'),
-        price: 20),
-  ];
+  factory Asbeza.fromJson(Map<String, dynamic> parsedJson) {
+    return Asbeza(
+        id: parsedJson["id"],
+        name: parsedJson["description"],
+        image: parsedJson["image"],
+        price: parsedJson["price"]);
+  }
+
+  @override
+  // TODO: implement props
+  List<Object?> get props => throw UnimplementedError();
 }

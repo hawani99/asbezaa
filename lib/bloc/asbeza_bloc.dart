@@ -7,7 +7,7 @@ part 'asbeza_event.dart';
 part 'asbeza_state.dart';
 
 class AsbezaBloc extends Bloc<AsbezaEvent, AsbezaState> {
-  AsbezaBloc() : super(AsbezaLoading()) {
+  AsbezaBloc() : super(const AsbezaLoading()) {
     on<LoadAsbeza>((event, emit) async {
       await Future<void>.delayed(const Duration(seconds: 1));
       emit(const AsbezaLoaded(asbeza: [], history: []));
